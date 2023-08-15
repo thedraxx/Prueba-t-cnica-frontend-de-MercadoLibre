@@ -1,7 +1,11 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 
 const Navbar = () => {
+
+    const [search, setSearch] = useState("")
+
     return (
         <div
             className="flex items-center justify-center w-full h-16 px-6 dark:bg-neutral-900 dark:text-neutral-100"
@@ -18,6 +22,8 @@ const Navbar = () => {
             <input
                 type="text"
                 placeholder="Search"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
                 className="border-2 w-8/12 flex border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
             />
             <button
