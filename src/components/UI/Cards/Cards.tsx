@@ -1,6 +1,7 @@
 "use client";
 import { Result } from '@/interface/Iproducts';
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
 
 interface IProps {
@@ -19,8 +20,8 @@ const Cards = ({ products }: IProps) => {
                             key={product.id}
                             className="flex justify-start item-center flex-row bg-white-700 mt-5 p-5 ml-5"
                         >
-                            <button
-                                onClick={() => console.log('hola')}
+                            <Link
+                                href={`/product/${product.id}`}
                             >
                                 <Image
                                     src={product.thumbnail}
@@ -29,7 +30,7 @@ const Cards = ({ products }: IProps) => {
                                     height={150}
                                     className='object-contain mr-10 '
                                 />
-                            </button>
+                            </Link>
 
                             <div
                                 className="flex flex-col top mi-div w-64 h-40"
