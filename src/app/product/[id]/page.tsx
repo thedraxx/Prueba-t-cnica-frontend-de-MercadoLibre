@@ -1,4 +1,5 @@
 import { IdatailProduct } from '@/interface/IdetailProduct';
+import Image from 'next/image';
 import React from 'react'
 
 const getDetailProduct = async (id: string) => {
@@ -19,12 +20,22 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
     const getDetail = await getDetailProduct(id);
     const getDetailDesc = await getDetailDescription(id);
 
-
-
-
-
     return (
-        <div>page</div>
+        <div
+            className='flex flex-1 w-full flex-col justify-start items-start bg-white h-screen '
+        >
+            <h1>Detalle del producto</h1>
+            <h2>{getDetail.title}</h2>
+            <Image
+                src={getDetail.thumbnail}
+                alt={getDetail.title}
+                width={200}
+                height={200}
+            />
+            <p>{getDetailDesc.plain_text}</p>
+
+
+        </div>
     )
 }
 
