@@ -1,3 +1,4 @@
+import React from 'react'
 import ListOfProducts from '@/components/UI/ListProducts/ListOfProducts'
 
 export default function Home() {

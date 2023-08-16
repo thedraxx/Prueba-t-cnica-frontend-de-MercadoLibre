@@ -1,10 +1,11 @@
 'use client'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { SearchContext } from '@/components/context/SearchContext';
 
 const Navbar = () => {
 
-    const [search, setSearch] = useState("")
+    const { search, changeValueInput } = useContext(SearchContext)
 
     return (
         <div
@@ -23,7 +24,7 @@ const Navbar = () => {
                 type="text"
                 placeholder="Search"
                 value={search}
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={(e) => changeValueInput(e.target.value)}
                 className="border-2 w-8/12 flex border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
             />
             <button
