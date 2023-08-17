@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import React, { useContext, useState } from 'react'
 import { SearchContext } from '@/components/context/SearchContext';
+import Link from 'next/link';
 
 const Navbar = () => {
 
@@ -12,14 +13,19 @@ const Navbar = () => {
             className="flex items-center justify-center w-full h-16 px-6 dark:bg-neutral-900 dark:text-neutral-100"
             style={{ backgroundColor: "#FFE600" }}
         >
-            <Image
-                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert mr-10"
-                src="/ML-Logo.svg"
-                alt="Next.js Logo"
-                width={50}
-                height={37}
-                priority
-            />
+            <Link
+                href="/"
+            >
+                <Image
+                    className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert mr-10"
+                    src="/ML-Logo.svg"
+                    alt="Next.js Logo"
+                    width={50}
+                    height={37}
+                    priority
+                />
+            </Link>
+
             <input
                 type="text"
                 placeholder="Search"

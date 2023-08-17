@@ -28,11 +28,12 @@ const ListOfProducts = () => {
             {
                 products.length === 0 ? (
                     <div
-                        className='flex flex-1 w-7/12 h-full bg-gray mt-10 rounded-lg  mb-10'
-                    />
+                        className='flex flex-1 h-full mt-10  mb-10 sm:w-9/12 md:7/12'
+                    >
+                    </div>
                 ) : (
                     <div
-                        className='flex flex-1 w-7/12 h-full bg-white mt-10 rounded-lg shadow-lg mb-10'
+                        className='flex flex-1 h-full bg-white mt-10 rounded-lg shadow-lg mb-10 sm:w-9/12 md:7/12'
                     >
                         <Cards
                             products={products}

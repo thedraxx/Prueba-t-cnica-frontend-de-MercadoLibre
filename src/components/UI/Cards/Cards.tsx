@@ -28,15 +28,15 @@ const Cards = ({ products }: IProps) => {
                                     alt="Picture of the author"
                                     width={180}
                                     height={150}
-                                    className='object-contain mr-10 '
+                                    className='object-contain mr-5 '
                                 />
                             </Link>
 
                             <div
-                                className="flex flex-col top mi-div w-64 h-40"
+                                className="flex flex-col top mi-div h-50 p-5 w-64 "
                             >
                                 <h1
-                                    className="text-2xl font-bold text-black mb-5"
+                                    className="font-bold text-black mb-5 sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl"
                                 >
                                     $
                                     {
@@ -44,7 +44,7 @@ const Cards = ({ products }: IProps) => {
                                     }
                                 </h1>
                                 <p
-                                    className="text-black"
+                                    className="font-bold text-xs text-black  xs:text-xs sm:text-sm md:text-xl"
                                 >
                                     {
                                         product.title
@@ -60,7 +60,7 @@ const Cards = ({ products }: IProps) => {
                                 className="flex items justify-center items-start"
                             >
                                 <p
-                                    className="text-sm font-bold text-gray-700 "
+                                    className=" font-bold text-gray-700  text-xs sm:text-sm md:text-md"
                                 >
                                     {
                                         product.address.state_name
